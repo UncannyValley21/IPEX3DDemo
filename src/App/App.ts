@@ -11,9 +11,14 @@ export class App {
     this.scene = createMainScene(this.engine, canvas);
   }
 
-  start() {
+  public start() {
     this.engine.runRenderLoop(() => {
       this.scene.render();
+    });
+
+    //Make sure to resize engine when window resizes, to keep raycast from screen accurate
+    window.addEventListener('resize', () => {
+      this.engine.resize();
     });
   }
 }
