@@ -21,3 +21,7 @@ yarn-error.log*
 # OS files
 .DS_Store
 Thumbs.db
+
+# Blender Backup
+*.blend1
+*.blend2
